@@ -1,0 +1,31 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!-- En este lugar va lo que cambia y se lo asocia a la vista -->
+    <form action="/AppCoder/buscar_profesor/" method="GET">
+        <!-- <table>
+            {{ miFormulario.as_table }}
+        </table>  -->
+        <label>Nombre</label>
+        <input type="text" name="nombre" id="nombre"> 
+        <br/>           
+        <label>Apellido</label>
+        <input type="text" name="apellido" id="apellido"> 
+        <br/>
+        <label>Email</label>
+        <input type="email" name="email" id="email"> 
+        <br/>
+        <label>Profesión</label>
+        <input type="text" name="profesion" id="profesion">
+        <br/>
+        <input type="submit" value="Buscar">
+       
+    </form>
+        <h1>Profesores</h1>
+    <p>Ingrese los datos correspondientes</p>
+
+{% endblock %}

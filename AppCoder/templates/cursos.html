@@ -1,0 +1,29 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!-- En este lugar va lo que cambia y se lo asocia a la vista -->
+    {% if miFormulario.errors %}
+        <p style="color: red;">Están mal los datos, revisar.</p>
+    {% endif %}
+
+    <form action="/AppCoder/buscar_curso/" method="GET">
+        <!-- <table>
+            {{ miFormulario.as_table }}
+        </table>  -->
+        <label>Curso</label>
+        <input type="text" name="nombre" id="nombre"> 
+        <br/>   
+        <label>Camada</label>
+        <input type="number" name="camada" id="camada"> 
+        <br/>
+        <input type="submit" value="Buscar">
+       
+    </form>
+        <h1>Cursos</h1>
+    <p>Ingrese los datos correspondientes</p>
+
+{% endblock %}
